@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: multi-container
+  name: multi-container
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+
+  - image: hashicorp/http-echo
+    name: http-echo
+    args:
+      - "-text=hello world"
