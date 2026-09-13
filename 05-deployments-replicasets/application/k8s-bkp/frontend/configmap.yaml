@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-config
+  namespace: ckad
+data:
+  API_URL: http://backend-svc.ckad.svc.cluster.local:5000
+  # API_URL: http://backend-svc:5000
+  # API_URL: https://meubackend.com.br
